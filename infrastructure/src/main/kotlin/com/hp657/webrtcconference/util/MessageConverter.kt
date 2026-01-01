@@ -8,11 +8,8 @@ import org.springframework.stereotype.Component
 
 @Component
 class MessageConverter {
-    val objectMapper = ObjectMapper()
-        .registerModule(
-            KotlinModule.Builder()
-                .build()
-        )
+    val objectMapper = ObjectMapper().registerModule(KotlinModule.Builder().build())
+
     fun toJson(message: SignalMessage): String {
         return objectMapper.writeValueAsString(message)
     }
