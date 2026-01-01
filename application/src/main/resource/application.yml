@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+  tomcat:
+    connection-timeout: 600000
+    max-connections: 10000
+    threads:
+      max: 200
+      min-spare: 10
+
+spring:
+  web:
+    resources:
+      static-locations: classpath:/static/
+
+logging:
+  level:
+    root: INFO
+    com.hp657.webrtcconference: DEBUG
+    org.springframework.web.socket: DEBUG
