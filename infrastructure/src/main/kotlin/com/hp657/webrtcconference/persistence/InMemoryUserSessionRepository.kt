@@ -8,9 +8,9 @@ import java.util.concurrent.ConcurrentHashMap
 @Repository
 class InMemoryUserSessionRepository : UserSessionRepository {
 
-    private val sessions = ConcurrentHashMap<String, UserSession>() // Key: sessionId
-    private val webSocketSessionIdMap = ConcurrentHashMap<String, String>() // Key: webSocketSessionId, Value: sessionId
-    private val userIdMap = ConcurrentHashMap<String, String>() // Key: userId, Value: sessionId
+    private val sessions = ConcurrentHashMap<String, UserSession>()
+    private val webSocketSessionIdMap = ConcurrentHashMap<String, String>()
+    private val userIdMap = ConcurrentHashMap<String, String>()
 
     override fun save(userSession: UserSession) {
         sessions[userSession.sessionId] = userSession
