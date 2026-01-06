@@ -3,9 +3,9 @@ package com.hp657.webrtcconference.websocket
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.KotlinModule
 import com.hp657.webrtcconference.model.SignalMessage
-import com.hp657.webrtcconference.port.out.SignalingMessageSender
-import com.hp657.webrtcconference.port.out.WebSocketMessageSenderPort
-import com.hp657.webrtcconference.util.MessageConverter
+import com.hp657.webrtcconference.port.SignalingMessageSender
+import com.hp657.webrtcconference.port.WebSocketMessageSenderPort
+import com.hp657.webrtcconference.util.SignalMessageConverter
 import org.springframework.stereotype.Component
 import org.springframework.web.socket.TextMessage
 import org.springframework.web.socket.WebSocketSession
@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap
 
 @Component
 class WebSocketMessageSender(
-    private val messageConverter: MessageConverter
+    private val messageConverter: SignalMessageConverter
 ) : SignalingMessageSender, WebSocketMessageSenderPort {
 
     private val sessions = ConcurrentHashMap<String, WebSocketSession>()

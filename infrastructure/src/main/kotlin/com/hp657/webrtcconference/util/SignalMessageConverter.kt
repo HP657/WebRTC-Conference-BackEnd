@@ -7,7 +7,7 @@ import com.hp657.webrtcconference.model.SignalMessage
 import org.springframework.stereotype.Component
 
 @Component
-class MessageConverter {
+class SignalMessageConverter {
     val objectMapper = ObjectMapper().registerModule(KotlinModule.Builder().build())
 
     fun toJson(message: SignalMessage): String {

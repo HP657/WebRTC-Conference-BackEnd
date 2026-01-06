@@ -1,4 +1,4 @@
-package com.hp657.webrtcconference.port.`in`
+package com.hp657.webrtcconference.usecase
 
 import com.hp657.webrtcconference.model.SignalMessage
 

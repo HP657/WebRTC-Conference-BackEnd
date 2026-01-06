@@ -1,12 +1,12 @@
-package com.hp657.webrtcconference.service
+package com.hp657.webrtcconference.usecase
 
 import com.hp657.webrtcconference.model.SignalMessage
 import com.hp657.webrtcconference.model.UserSession
-import com.hp657.webrtcconference.port.`in`.SignalingUseCase
-import com.hp657.webrtcconference.port.out.UserSessionRepository
-import com.hp657.webrtcconference.port.out.WebSocketMessageSenderPort
+import com.hp657.webrtcconference.usecase.SignalingUseCase
+import com.hp657.webrtcconference.port.UserSessionRepository
+import com.hp657.webrtcconference.port.WebSocketMessageSenderPort
 
-class SignalingService(
+class SignalingUseCaseImpl(
     private val userSessionRepository: UserSessionRepository,
     private val webSocketMessageSenderPort: WebSocketMessageSenderPort
 ) : SignalingUseCase {

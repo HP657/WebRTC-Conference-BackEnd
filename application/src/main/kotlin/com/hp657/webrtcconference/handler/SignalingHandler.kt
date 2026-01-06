@@ -1,8 +1,8 @@
-package com.hp657.webrtcconference.presentation
+package com.hp657.webrtcconference.handler
 
 import com.hp657.webrtcconference.websocket.WebSocketMessageSender
-import com.hp657.webrtcconference.util.MessageConverter
-import com.hp657.webrtcconference.port.`in`.SignalingUseCase
+import com.hp657.webrtcconference.util.SignalMessageConverter
+import com.hp657.webrtcconference.usecase.SignalingUseCase
 import org.springframework.stereotype.Component
 import org.springframework.web.socket.CloseStatus
 import org.springframework.web.socket.TextMessage
@@ -14,7 +14,7 @@ import java.nio.charset.StandardCharsets
 @Component
 class SignalingHandler(
     private val signalingUseCase: SignalingUseCase,
-    private val messageConverter: MessageConverter,
+    private val messageConverter: SignalMessageConverter,
     private val webSocketMessageSender: WebSocketMessageSender
 ) : TextWebSocketHandler() {
 

@@ -1,6 +1,6 @@
-package com.hp657.webrtcconference
+package com.hp657.webrtcconference.config
 
-import com.hp657.webrtcconference.presentation.SignalingHandler
+import com.hp657.webrtcconference.handler.SignalingHandler
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.socket.config.annotation.EnableWebSocket
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer

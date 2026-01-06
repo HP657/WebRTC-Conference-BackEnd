@@ -1,8 +1,8 @@
-package com.hp657.webrtcconference
+package com.hp657.webrtcconference.config
 
-import com.hp657.webrtcconference.port.`in`.SignalingUseCase
-import com.hp657.webrtcconference.port.out.UserSessionRepository
-import com.hp657.webrtcconference.service.SignalingService
+import com.hp657.webrtcconference.usecase.SignalingUseCase
+import com.hp657.webrtcconference.port.UserSessionRepository
+import com.hp657.webrtcconference.usecase.SignalingUseCaseImpl
 import com.hp657.webrtcconference.websocket.WebSocketMessageSender
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -15,6 +15,6 @@ class AppConfig {
         userSessionRepository: UserSessionRepository,
         webSocketMessageSender: WebSocketMessageSender
     ): SignalingUseCase {
-        return SignalingService(userSessionRepository, webSocketMessageSender)
+        return SignalingUseCaseImpl(userSessionRepository, webSocketMessageSender)
     }
 }

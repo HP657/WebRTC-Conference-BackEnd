@@ -1,7 +1,7 @@
-package com.hp657.webrtcconference.persistence
+package com.hp657.webrtcconference.repository
 
 import com.hp657.webrtcconference.model.UserSession
-import com.hp657.webrtcconference.port.out.UserSessionRepository
+import com.hp657.webrtcconference.port.UserSessionRepository
 import org.springframework.stereotype.Repository
 import java.util.concurrent.ConcurrentHashMap
 

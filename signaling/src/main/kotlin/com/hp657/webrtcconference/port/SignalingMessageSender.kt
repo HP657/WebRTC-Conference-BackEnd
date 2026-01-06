@@ -1,4 +1,4 @@
-package com.hp657.webrtcconference.port.out
+package com.hp657.webrtcconference.port
 
 import com.hp657.webrtcconference.model.SignalMessage
 
